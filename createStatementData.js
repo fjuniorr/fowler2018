@@ -1,13 +1,13 @@
 function createStatementData(invoice, plays) {
 
-    const statementData = {};
+    const result = {};
     
-    statementData.customer = invoice.customer;
-    statementData.performances = invoice.performances.map(enrichPerformance);
-    statementData.totalAmount = totalAmount();
-    statementData.totalVolumeCredits = totalVolumeCredits();
+    result.customer = invoice.customer;
+    result.performances = invoice.performances.map(enrichPerformance);
+    result.totalAmount = totalAmount(result);
+    result.totalVolumeCredits = totalVolumeCredits(result);
 
-    return statementData;
+    return result;
 
     function enrichPerformance(aPerformance) {
         const result = Object.assign({}, aPerformance);
@@ -52,13 +52,13 @@ function createStatementData(invoice, plays) {
         return result;
     }
 
-    function totalVolumeCredits() {
-        return statementData.performances
+    function totalVolumeCredits(data) {
+        return data.performances
                 .reduce((total, p) => total + p.volumeCredits, 0);
     }
 
-    function totalAmount() {
-        return statementData.performances
+    function totalAmount(data) {
+        return data.performances
                 .reduce((total, p) => total + p.amount, 0);
     }
 
