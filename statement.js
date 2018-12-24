@@ -5,7 +5,7 @@ function statement (invoice, plays) {
     return renderPlainText(dt.createStatementData(invoice, plays));
 }
 
-function renderPlainText(data, plays) {
+function renderPlainText(data) {
     
     let result = `Statement for ${data.customer}\n`
 
