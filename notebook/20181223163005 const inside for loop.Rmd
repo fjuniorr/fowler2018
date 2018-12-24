@@ -1,0 +1,27 @@
+---
+title: const inside for loop
+id: '20181223163005'
+tags: NULL
+draft: FALSE
+---
+
+# Summary
+
+Variables declared with the `const` keyword can be redeclared inside a for block.
+
+
+```{node}
+const fixed = 1;
+const fixed = 2; # this throws an error
+```
+
+```{node}
+for(let i = 0; i < 3; i++) {
+    const fixed = i; # this works
+    console.log(fixed);
+}
+```
+
+# References
+
++ [Variable Declaration in ES6](https://medium.com/@mautayro/es6-variable-declaration-for-loops-why-const-works-in-a-for-in-loop-but-not-in-a-normal-a200cc5467c2)
