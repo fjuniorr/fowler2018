@@ -1,0 +1,13 @@
+---
+title: js - modules
+id: '20181224104727'
+tags: NULL
+draft: FALSE
+---
+
+
+# References
+
++ [Eloquent Javascript Modules](https://eloquentjavascript.net/10_modules.html)
+
++ [An Update on ES6 Modules in Node.js](https://medium.com/the-node-js-collection/an-update-on-es6-modules-in-node-js-42c958b890c)
