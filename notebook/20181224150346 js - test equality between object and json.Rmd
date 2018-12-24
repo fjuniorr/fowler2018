@@ -1,0 +1,6 @@
+---
+title: js - test equality between object and json
+id: '20181224150346'
+tags: NULL
+draft: FALSE
+---
