@@ -1,0 +1,30 @@
+---
+title: js - getter in class
+id: '20181224160513'
+tags: NULL
+draft: FALSE
+---
+
+Sometimes it is desirable to allow access to a property that returns a dynamically computed value, or you may want to reflect the status of an internal variable without requiring the use of explicit method calls. In JavaScript, this can be accomplished with the use of a getter. The get syntax binds an object property to a function that will be called when that property is looked up.
+
+
+
+```{node}
+class Person {
+
+    constructor(yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    get age() {
+
+        const d = new Date();
+        const currentYear = d.getFullYear();
+
+        return currentYear - this.yearOfBirth;
+    }
+}
+
+let xico = new Person(1989);
+console.log(xico.age);
+```
