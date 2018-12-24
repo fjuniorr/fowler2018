@@ -1,0 +1,24 @@
+---
+title: js - function declaration vs function expression
+id: '20181223190740'
+tags: NULL
+draft: FALSE
+---
+
+```{node}
+// function expression
+var functionOne = function() {
+    // Some code
+}; 
+
+// function declaration - gets hoisted
+function functionTwo() {
+    // Some code
+}
+```
+
+# References
+
++ [StackOverflow Answer](https://stackoverflow.com/questions/336859/var-functionname-function-vs-function-functionname)
+
++ @crockford2008

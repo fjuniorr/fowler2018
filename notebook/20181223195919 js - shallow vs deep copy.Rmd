@@ -1,0 +1,34 @@
+---
+title: js - shallow vs deep copy
+id: '20181223195919'
+tags: NULL
+draft: FALSE
+---
+
+In programming, we store values in variables. Making a copy means that you initiate a new variable with the same value(s). However, there is a big potential pitfall to consider: deep copying vs. shallow copying. A deep copy means that all of the values of the new variable are copied and disconnected from the original variable. A shallow copy means that certain (sub-)values are still connected to the original variable.
+
+```{node}
+let obj = {name: {
+                firstName: 'Francisco',
+                lastName: 'Alves'}, 
+           age: 29};
+
+
+shallowCopy = Object.assign({}, obj);
+shallowCopy.age = 31;
+console.log(obj.age); // prints 29 because in the first level a deep copy is performed
+
+shallowCopy.name.firstName = 'Samira';
+
+console.log(obj.name.firstName); // prints Samira because in sublevels a shallow copy is performed
+```
+
+# References
+
++ [_.clone(value) and _.cloneDeep(value)](https://lodash.com/docs/4.17.11#clone)
+
++ [Object.assign() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+
++ [Understanding Deep and Shallow Copy in Javascript](https://we-are.bookmyshow.com/understanding-deep-and-shallow-copy-in-javascript-13438bad941c)
+
+Diagram of shallow and deep copy.

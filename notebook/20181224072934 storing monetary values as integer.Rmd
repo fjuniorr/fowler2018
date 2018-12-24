@@ -1,0 +1,12 @@
+---
+title: storing monetary values as integer
+id: '20181224072934'
+tags: NULL
+draft: FALSE
+---
+
+
+
+# References
+
++ [https://frontstuff.io/how-to-handle-monetary-values-in-javascript](How to Handle Monetary Values in JavaScript)
