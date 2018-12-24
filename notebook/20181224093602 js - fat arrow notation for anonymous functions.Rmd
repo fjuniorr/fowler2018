@@ -1,0 +1,28 @@
+---
+title: js - fat arrow notation for anonymous functions
+id: '20181224093602'
+tags: NULL
+draft: FALSE
+---
+
+An anonymous function (function literal, lambda abstraction, or lambda expression) is a function definition that is not bound to an identifier. ES6 introduces a new syntax for writing anonymous functions.
+
+```{node}
+input = [{name: 'Francisco', job: 'programmer'}, 
+         {name: 'Samira', job: 'analyst'}, 
+         {name: 'Fabricio', job: 'programmer'}];
+
+const names = input
+              .filter(i => i.job === 'programmer')
+              .map(i => i.name.toUpperCase());
+
+console.log(names);         
+```
+
+
+
+# References
+
++ [Anonymous function](https://en.wikipedia.org/wiki/Anonymous_function)
+
++ [ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
